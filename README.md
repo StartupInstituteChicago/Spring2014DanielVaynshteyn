@@ -1,2 +1,0 @@
-Spring2014DanielVaynshteyn
-==========================
