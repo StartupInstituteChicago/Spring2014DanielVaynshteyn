@@ -1,5 +1,12 @@
 class Restaurant < ActiveRecord::Base
-#include CarrierWave::RMagick
-  belongs_to :restaurant
+
+  validates :name, :description, :address, :phonenum, presence:true
+  validates :name, :address, length: { minimum: 4 }
+  validates :phonenum, length: { minimum: 10 }
+  #validates :owner, :presence => true
+
+  belongs_to :owner
+
+
   mount_uploader :photo, ImageUploader
 end
